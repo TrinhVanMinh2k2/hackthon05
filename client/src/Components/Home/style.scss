@@ -1,0 +1,83 @@
+.home {
+  padding: 50px 150px 50px 150px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: red;
+  height: 640px;
+  background-image: linear-gradient(90deg, red, yellow);
+  h1{
+    color: #ddd;
+  }
+  .form {
+    width: 400px;
+    display: flex;
+    margin-left: 400px;
+    margin-bottom: 20px;
+    input {
+      margin-right: 5px;
+      background-color: transparent;
+      border: 1px solid #ddd;
+    }
+    input:focus{
+        color: #fff;
+    }
+
+    button {
+      border: 1px solid #ddd;
+      background-color: transparent;
+      border-radius: 5px;
+      width: 80px;
+      font-size: 17px;
+      color: #ddd;
+      cursor: pointer;
+    }
+    button:hover {
+      border: 1px solid #fff;
+      color: #fff;
+    }
+  }
+  .table {
+    margin-left: 400px;
+    .item {
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 7px;
+      height: 20px;
+      width: 380px;
+      padding: 10px;
+      display: flex;
+      color: #ddd;
+      .name {
+        width: 320px;
+        text-align: left;
+      }
+      .edit {
+        display: none;
+        margin-right: 10px;
+        cursor: pointer;
+        .icon-edit {
+          font-size: x-large;
+          color: orange;
+        }
+      }
+      .delete {
+        display: none;
+        cursor: pointer;
+        .icon-delete {
+          font-size: x-large;
+          color: red;
+        }
+      }
+    }
+    .item:hover {
+      background-color: #f9f7f7;
+      color: #333;
+      .edit {
+        display: block;
+      }
+      .delete {
+        display: block;
+      }
+    }
+  }
+}

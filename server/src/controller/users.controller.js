@@ -1,18 +1,22 @@
 const { getUserByEmail } = require("../repository/users.repository");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
-// Xu li Logic va gui  response ve client
+
+
 async function login(req, res) {
+  
   const { email, password } = req.body;
   const result = await getUserByEmail(email);
+  
   if (!result) {
     return res.status(404).json({
-      message: "Email chua duoc dang ky",
+      message: "Email không tồn tại",
     });
   }
+
   if (result.password != password) {
     return res.status(400).json({
-      message: "Sai mat khau",
+      message: "Mật khẩu không đúng",
     });
   }
   const token = jwt.sign(
@@ -20,7 +24,7 @@ async function login(req, res) {
     process.env.JWT_SECRET
   );
   res.status(200).json({
-    message: "Dang nhap thanh cong",
+    message: "Đăng nhập thành công",
     token,
   });
 }

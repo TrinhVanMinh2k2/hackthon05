@@ -1,0 +1,36 @@
+.login{
+    padding: 50px 150px 40px 150px;
+    text-align: center;
+    
+    .form-login{
+        border: 1px solid #ddd;
+        width: 600px;
+        margin-left: 300px;
+        padding: 30px;
+        .form{
+            margin-left: 90px;
+            margin-right: -100px;
+        }
+        .title{
+            margin-bottom: 20px;
+            font-size: 30px;
+            font-family: 'Roboto', sans-serif;
+        }
+        .btn-add{
+            border: 1px solid #ddd;
+            margin-left: -400px;
+            width: 300px;
+            height: 35px;
+            border-radius: 7px;
+            cursor: pointer;
+            background-color: #fff;
+            color: #333;
+            font-size: 18px;
+        }
+        .btn-add:hover{
+            border: 1px solid rgb(0, 195, 255);
+            color: rgb(0, 195, 255);
+        }
+    }
+
+}

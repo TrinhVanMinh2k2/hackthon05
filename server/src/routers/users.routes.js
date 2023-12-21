@@ -1,7 +1,7 @@
 const { login } = require("../controller/users.controller");
 
 const usersRouter = (app) => {
-  app.post("/auth/login", login);
+  app.post("/login", login);
 };
 
 module.exports = { usersRouter };

@@ -1,23 +1,24 @@
 const db = require("../config/db.config");
-// select ten_cot from ten_bang
+
+
 async function addTodos(nameTodo) {
-  const [result] = await db.execute("insert into todo (nameTodo) values (?)", [
+  const [result] = await db.execute("INSERT INTO todos (nameTodo) VALUES (?)", [
     nameTodo,
   ]);
   return result;
 }
 async function renderTodo(nameTodo) {
-  const [result] = await db.execute("select * from todo");
-  console.log(result);
+  const [result] = await db.execute("SELECT * FROM todos");
   return result;
 }
-async function deleteTodo(id) {
-  const [result] = await db.execute("delete from todo where id = ?", [id]);
+
+async function remove(id) {
+  const [result] = await db.execute("DELETE FROM todos WHERE id = ?", [id]);
   return result;
 }
 async function updateTodo(nameTodo, id) {
   const [result] = await db.execute(
-    "update todo set nameTodo = ? where id = ?",
+    "UPDATE todos SET nameTodo = ? WHERE id = ?",
     [nameTodo, id]
   );
   return result;
@@ -26,6 +27,6 @@ async function updateTodo(nameTodo, id) {
 module.exports = {
   addTodos,
   renderTodo,
-  deleteTodo,
+  remove,
   updateTodo,
 };

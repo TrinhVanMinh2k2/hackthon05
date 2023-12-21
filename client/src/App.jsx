@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import Login from "./Components/Login";
-import TodoList from "./Components/TodoList";
+import Login from "./Page/Login/Login";
+import TodoList from "./Components/Home/TodoList";
 
 function App() {
   return (

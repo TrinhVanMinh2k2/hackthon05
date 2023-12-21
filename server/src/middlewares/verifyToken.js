@@ -22,7 +22,7 @@ const verifyToken = (req, res, next) => {
       if (data.role != 1) {
         return res
           .status(403)
-          .json({ message: "Ban khong co quyen lam viec nay" });
+          .json({ message: "Bạn không có quyền này" });
       }
       next();
     });
